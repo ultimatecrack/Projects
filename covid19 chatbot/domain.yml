@@ -1,0 +1,98 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- covid_report
+- faq
+- self_assessment
+- thanks
+- out_of_scope
+entities:
+- place
+- ORDINAL
+- GPE
+- DATE
+slots:
+  aches_and_pains:
+    type: unfeaturized
+  chest_pain_or_pressure:
+    type: unfeaturized
+  conjunctivitis:
+    type: unfeaturized
+  diarrhoea:
+    type: unfeaturized
+  difficulties:
+    type: unfeaturized
+  dry_cough:
+    type: unfeaturized
+  fever:
+    type: unfeaturized
+  headache:
+    type: unfeaturized
+  loss_of_speech_or_movement:
+    type: unfeaturized
+  loss_of_taste_or_smell:
+    type: unfeaturized
+  rash_or_discolouration:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  sore_throat:
+    type: unfeaturized
+  tiredness:
+    type: unfeaturized
+responses:
+  utter_greet:
+  - text: Hey! I am Covin, I can assist you <br>1. State and district wise covid count<br>2.
+      Corona self assessment<br>3. FAQ on Covid19
+  utter_goodbye:
+  - text: Bye...Stay home ,Stay safe!
+  - text: See you buddy...Stay home ,Stay safe!
+  - text: Good bye... Stay home ,Stay safe:)
+  utter_iamabot:
+  - text: Did I forget to introduce myself. I am Covin to keep you update on Covid19
+      pandemic.
+  utter_ask_fever:
+  - text: Do you have fever?
+  utter_ask_dry_cough:
+  - text: Do you have dry cough?
+  utter_ask_tiredness:
+  - text: Do you feel tired?
+  utter_ask_aches_and_pains:
+  - text: Do you have aches and pains?
+  utter_ask_sore_throat:
+  - text: Do you have sore throat?
+  utter_ask_diarrhoea:
+  - text: Do you have diarrhoea?
+  utter_ask_conjunctivitis:
+  - text: Do you have conjunctivitis?
+  utter_ask_headache:
+  - text: Do you have headache?
+  utter_ask_loss_of_taste_or_smell:
+  - text: Are you having loss of taste or smell?
+  utter_ask_rash_or_discolouration:
+  - text: Are you having rash on skin or discolouration of fingers or toes?
+  utter_ask_difficulties:
+  - text: Do you feel difficulty in breathing or shortness of breath?
+  utter_ask_chest_pain_or_pressure:
+  - text: Do you feel chest pain or pressure?
+  utter_ask_loss_of_speech_or_movement:
+  - text: Do you feel loss of speech or movement?
+  utter_out_of_scope:
+  - text: Sorry, I can't handle that request.
+  utter_noworries:
+  - text: My pleasure.
+  - text: You are welcome!
+  utter_fallback:
+  - text: Could not understand, could you please say again?
+actions:
+- action_covid_report
+- respond_faq
+- action_default_fallback
+forms:
+- self_assessment_form
